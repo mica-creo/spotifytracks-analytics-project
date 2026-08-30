@@ -60,9 +60,10 @@ Initial Model: (all candidate predictors, encoded Explicit as 0/1 and Time Signa
 
 Model 2: We re-ran the model with all variables on the popularity > 0 sample (per the A5 decision), and doubled our R² to 0.0747. This became the working sample for all later models.
 
-Modek 3. We removed the time-signature dummy variables first because none were significant at α = 0.01. 
+Model 3. We removed the time-signature dummy variables first because none were significant at α = 0.01. 
 
-Multicollinearity Test: energy, loudness, and acousticness were highly correlated with each other (energy–loudness r = 0.76; energy–acousticness r = −0.72). 
+Multicollinearity Test: energy, loudness, and acousticness were highly correlated with each other (energy–loudness r = 0.76; energy–acousticness r = −0.72).
+
 We tested two branches — keeping energy and dropping loudness/acousticness (Model 4) versus dropping energy and keeping the other two (Models 5–7) — and selected **Model 4** as final. 
 
 Final Model: Our final model has the better adjusted R² of models 4-7 (0.0728 vs. 0.0715 for the best alternative), we kept all predictors significant at α = 0.01, and reduced the collinearity concern by removing the two variables most entangled with energy. 
@@ -71,6 +72,6 @@ Interpretation: The final model explains only ~7.3% of the variation in populari
 
 ## Interpretation and Conclusions 
 
-Given the complexity of the music industry, audio features alone are a weak predictor of popularity — factors like artist recognition, marketing, and playlist placement are likely doing more of the work but aren't in this dataset. We suspected 'genre' to be a meaningful predictor as well, but dropped it due to having more categories than allowed.
+Given the complexity of the music industry, audio features alone are a weak predictor of popularity — factors like artist recognition, marketing, and genre are likely doing more of the work but aren't in this dataset. We suspect 'artist' and 'genre' to be meaningful predictors in this dataset, but dropped them due to having more categories than allowed for this assignment.
 
-Our dataset still shows interesting relationships between audio features and popularity. While we cannot assume causality, our dataset shows positive correlation of danceability on popularity, and negative correlations of mode, speechiness, instrumentalness, liveness, valence, tempo, explicit status, and duration. As an analyst and a heavy music listener, I believe these are meaningful relationships that reflect the tendencies (or nontendencies) of todays' songs that become ubiquitous.
+Our dataset still shows interesting relationships between audio features and popularity. While we cannot assume causality, our dataset shows positive correlation of danceability and explicit status on popularity, and negative correlations of mode, speechiness, instrumentalness, liveness, valence, tempo, and duration. As an analyst and a heavy music listener, I believe these are meaningful relationships that reflect the tendencies (or nontendencies) of todays' songs that become ubiquitous.
